@@ -31,21 +31,8 @@
   </div>
   <div class="entry-content">
     <div id="toc"></div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- ad -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6646287218970900"
-        data-ad-slot="4327619833"
-        data-ad-format="rectangle"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="article-top-space"></div>
 
     @php(the_content())
-
 
     <div class="article-tags-container">
       {{--<p class="title">Related Tags</p>--}}
@@ -61,16 +48,6 @@
         @endforeach
       </div>
     </div>
-
-    <!-- ad -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6646287218970900"
-        data-ad-slot="4327619833"
-        data-ad-format="rectangle"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 
     @if(get_post_meta(get_the_ID(), 'isauthor', true))
     <div class="article-author">
