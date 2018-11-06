@@ -1,7 +1,7 @@
 /**
  *  Slider
  */
-export default function() {
+export default function () {
   // eslint-disable-next-line no-undef
   const data = slider_data;
 
@@ -14,7 +14,7 @@ export default function() {
     slideAnimation = '250px';
   } else if (window.matchMedia('(max-width:900px)').matches) {
     slideAnimation = '350px';
-  } else if (window.matchMedia('(max-width:1100px)').matches)  {
+  } else if (window.matchMedia('(max-width:1100px)').matches) {
     slideAnimation = '450px';
   } else if (window.matchMedia('(max-width:1400px)').matches) {
     slideAnimation = '500px';
@@ -49,14 +49,14 @@ export default function() {
 
   function animateContents(el, index, className) {
     $('#slider-' + el)
-    .addClass(className)
-    .delay( 400 )
-    .text(data[index][el])
-    .delay( 400 )
-    .queue(function(next){
-      $(this).removeClass(className);
-      next();
-    });
+      .addClass(className)
+      .delay(400)
+      .text(data[index][el])
+      .delay(400)
+      .queue(function (next) {
+        $(this).removeClass(className);
+        next();
+      });
   }
 
   function changeContents(index) {
@@ -67,47 +67,50 @@ export default function() {
     $('.tablet-bg-button').attr('href', data[index]['link']);
 
     $('.current-number')
-    .addClass('slider-slot-animation')
-    .delay( 400 )
-    .queue(function(next){
-      $(this).text(count + 1);
-      next();
-    })
-    .delay( 400 )
-    .queue(function(next){
-      $(this).removeClass('slider-slot-animation');
-      next();
-    });
+      .addClass('slider-slot-animation')
+      .delay(400)
+      .queue(function (next) {
+        $(this).text(count + 1);
+        next();
+      })
+      .delay(400)
+      .queue(function (next) {
+        $(this).removeClass('slider-slot-animation');
+        next();
+      });
 
-    setTimeout(function() {
+    setTimeout(function () {
       slidable = true;
-    }, 800)
+    }, 800);
   }
 
   function sliderAction(direction) {
     changeContents(count);
     const $active = $('.thumb-item.active');
-    if(direction === 'prev') {
-      $('.thumb-item').animate({'left': `+=${slideAnimation}`}, 100);
+    if (direction === 'prev') {
+      $('.thumb-item').animate({
+        left: `+=${slideAnimation}`
+      }, 100);
       changeBlur($active);
       $active.prev().removeClass('blur');
       $active.prev().addClass('active');
     } else if (direction === 'next') {
-      $('.thumb-item').animate({'left': `-=${slideAnimation}`}, 100);
+      $('.thumb-item').animate({
+        left: `-=${slideAnimation}`
+      }, 100);
       changeBlur($active);
       $active.next().removeClass('blur');
       $active.next().addClass('active');
     }
-    setTimeout(function() {
+    setTimeout(function () {
       slidable = true;
-    }, 800)
+    }, 800);
   }
 
   function changeBlur(el) {
     el.addClass('blur');
     el.removeClass('active');
   }
-
 
   /*
    *  Slider for mobile
@@ -126,23 +129,25 @@ export default function() {
 
     //スワイプの方向（left／right）を取得
     function onTouchMove(event) {
-      if (position - getPosition(event) > 10) { // 70px以上移動しなければスワイプと判断しない
+      if (position - getPosition(event) > 10) {
+        // 70px以上移動しなければスワイプと判断しない
         direction = 'left'; //左と検知
-      } else if (position - getPosition(event) < -10){  // 70px以上移動しなければスワイプと判断しない
+      } else if (position - getPosition(event) < -10) {
+        // 70px以上移動しなければスワイプと判断しない
         direction = 'right'; //右と検知
       }
     }
 
     function onTouchEnd() {
-      if (direction == 'right'){
+      if (direction == 'right') {
         prevAction();
-      } else if (direction == 'left'){
+      } else if (direction == 'left') {
         nextAction();
       }
 
-      setTimeout(function() {
+      setTimeout(function () {
         slidable = true;
-      }, 800)
+      }, 800);
     }
 
     //横方向の座標を取得
@@ -155,12 +160,12 @@ export default function() {
    */
   function sliderHoverHandler() {
     $('.tablet-bg-button').hover(
-      function() {
+      function () {
         $(this).addClass('hoverSliderButton');
       },
-      function() {
+      function () {
         $(this).removeClass('hoverSliderButton');
       }
-    )
+    );
   }
 }

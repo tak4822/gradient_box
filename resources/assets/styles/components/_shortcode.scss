@@ -12,6 +12,7 @@
     position: absolute;
     left: 0;
     top: 0;
+
     @media screen and (min-width: $tablet) {
       width: 8px;
     }
@@ -23,6 +24,7 @@
     margin: 0;
     padding-left: 10px;
     padding-top: 4px;
+
     @media screen and (min-width: $tablet) {
       font-size: 1.5rem;
       line-height: 2.2rem;
@@ -33,6 +35,7 @@
 .custom-red {
   margin: 40px auto 20px;
   position: relative;
+
   @media screen and (min-width: $tablet) {
     margin: 60px auto 20px;
   }
@@ -51,9 +54,11 @@
     margin-bottom: 3px;
     color: $red;
     padding-left: 20px;
+
     @media screen and (min-width: $tablet) {
       font-size: 1.3rem;
     }
+
     @media screen and (min-width: $tablet-bg) {
       font-size: 1.4rem;
     }
@@ -67,6 +72,7 @@
 
   .custom-note-text {
     font-size: 0.8rem;
+
     @media screen and (min-width: $tablet-bg) {
       font-size: 1rem;
     }
@@ -80,6 +86,7 @@
   padding: 10px;
   margin: 30px 0;
   text-decoration: none;
+
   @media screen and (min-width: $card-bg) {
     padding: 15px;
   }
@@ -94,10 +101,12 @@
     width: 100px;
     height: 100px;
     float: left;
+
     @media screen and (min-width: $card-bg) {
       width: 160px;
       height: 160px;
     }
+
     @media screen and (min-width: $desktop-lg) {
       width: 220px;
       height: 220px;
@@ -123,14 +132,17 @@
     height: 85px;
     overflow: hidden;
     margin-bottom: 10px;
+
     @media screen and (min-width: $card-bg) {
       overflow: visible;
       height: auto;
       width: calc(100% - 160px);
     }
+
     @media screen and (min-width: $sidebar) {
       font-size: 1.4rem;
     }
+
     @media screen and (min-width: $desktop-lg) {
       width: calc(100% - 220px);
       font-size: 1.6rem;
@@ -144,11 +156,13 @@
     line-height: 1.4rem;
     padding-bottom: 0;
     margin-bottom: 0;
+
     @media screen and (min-width: $card-bg) {
       width: calc(100% - 160px);
       float: left;
       padding-left: 10px;
     }
+
     @media screen and (min-width: $desktop-lg) {
       font-size: 0.9rem;
       width: calc(100% - 220px);
@@ -161,6 +175,7 @@
   display: flex;
   flex-direction: column;
   margin: 25px auto;
+
   @media screen and (min-width: $tablet-bg) {
     flex-direction: row;
     margin: 35px auto;
@@ -168,6 +183,7 @@
 
   &.left {
     align-items: flex-start;
+
     @media screen and (min-width: $tablet-bg) {
       align-items: center;
     }
@@ -175,6 +191,7 @@
 
   &.right {
     align-items: flex-end;
+
     @media screen and (min-width: $tablet-bg) {
       align-items: center;
     }
@@ -190,6 +207,7 @@
       overflow: hidden;
       margin-bottom: 15px;
       box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.16);
+
       @media screen and (min-width: $tablet-bg) {
         margin-bottom: 0;
       }
@@ -204,6 +222,7 @@
 
     &.left {
       margin-left: 10px;
+
       @media screen and (min-width: $tablet-bg) {
         order: 1;
       }
@@ -211,6 +230,7 @@
 
     &.right {
       margin-right: 10px;
+
       @media screen and (min-width: $tablet-bg) {
         order: 3;
       }
@@ -233,6 +253,7 @@
       border: 10px solid transparent;
       z-index: 2;
       transform-origin: center;
+
       @media screen and (min-width: $tablet-bg) {
         top: 50%;
       }
@@ -245,6 +266,7 @@
     &.left {
       align-self: flex-start;
       background: #fff7e2;
+
       @media screen and (min-width: $tablet-bg) {
         margin: 0 75px 0 35px;
       }
@@ -253,6 +275,7 @@
         left: 15px;
         transform: rotate(90deg);
         border-right: 10px solid #fff7e2;
+
         @media screen and (min-width: $tablet-bg) {
           transform: rotate(0);
           left: -18px;
@@ -263,14 +286,16 @@
     &.right {
       align-self: flex-end;
       background: $grey-bg;
+
       @media screen and (min-width: $tablet-bg) {
-        margin: 0 35px 0  75px;
+        margin: 0 35px 0 75px;
       }
 
       &::before {
         right: 15px;
         transform: rotate(-90deg);
         border-left: 10px solid $grey-bg;
+
         @media screen and (min-width: $tablet-bg) {
           transform: rotate(0);
           right: -18px;

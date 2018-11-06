@@ -6,17 +6,21 @@
   left: 0;
   z-index: 200;
   background: white;
+
   @media screen and (min-width: $tablet-bg) {
     width: 180px;
     height: 100vh;
     background: transparent;
   }
+
   @media screen and (min-width: $nav-wide) {
     width: 180px;
   }
+
   @media screen and (min-width: $desktop) {
     width: 220px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     left: 30px;
   }
@@ -27,9 +31,11 @@
     height: $headerHeight;
     background: white;
     position: relative;
+
     @media screen and (min-width: $tablet) {
       height: $headerHeight-tablet;
     }
+
     @media screen and (min-width: $tablet-bg) {
       height: 100vh;
       flex-direction: column;
@@ -65,30 +71,37 @@
   display: flex;
   justify-content: flex-start;
   margin: $spacer / 3.5;
+
   @media screen and (min-width: $tablet) {
     height: 60px;
     margin: $spacer / 2.5;
   }
+
   @media screen and (min-width: $tablet-bg) {
     height: 80px;
     position: absolute;
     top: $spacer;
     left: $spacer;
   }
+
   @media screen and (min-width: $desktop-sm) {
     top: $spacer * 0.6;
     left: $spacer * 0.8;
   }
+
   @media screen and (min-width: $nav-wide) {
     height: 90px;
   }
+
   @media screen and (min-width: $sidebar) {
     height: 100px;
   }
+
   @media screen and (min-width: $desktop) {
     top: 20px;
     left: 35px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     top: 30px;
     left: 45px;
@@ -110,6 +123,7 @@
     margin-right: -2px;
     z-index: 5;
     align-self: flex-end;
+
     @media screen and (min-width: $tablet-bg) {
       margin-right: -5px;
     }
@@ -191,21 +205,26 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+
   @media screen and (min-width: $tablet-bg) {
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 160px;
   }
+
   @media screen and (min-width: $desktop-sm) {
     padding-top: 140px;
   }
+
   @media screen and (min-width: $nav-wide) {
     padding-top: 160px;
   }
+
   @media screen and (min-width: $desktop) {
     padding-top: 170px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     padding-top: 200px;
   }
@@ -215,6 +234,7 @@
     height: 20vh;
     position: relative;
     overflow: hidden;
+
     @media screen and (min-width: $tablet-bg) {
       height: 55px;
       width: 100%;
@@ -224,9 +244,11 @@
       position: relative;
       @include slide-in;
     }
+
     @media screen and (min-width: $nav-wide) {
       height: 55px;
     }
+
     @media screen and (min-width: $desktop) {
       padding-left: 50px;
       margin-bottom: 15px;
@@ -238,6 +260,7 @@
       width: 100%;
       height: 100%;
       @include flex-center;
+
       @media screen and (min-width: $tablet-bg) {
         align-items: flex-start;
       }
@@ -247,12 +270,15 @@
       font-size: 1.5rem;
       font-weight: 600;
       @include gradient-text;
+
       @media screen and (min-width: $tablet-bg) {
         font-size: 1.2rem;
       }
+
       @media screen and (min-width: $nav-wide) {
         font-size: 1.4rem;
       }
+
       @media screen and (min-width: $desktop-lg) {
         font-size: 1.8rem;
         line-height: 2.2rem;
@@ -277,6 +303,7 @@
       opacity: 0;
       transition: opacity 0.1s ease, transform 0.6s ease;
       transition-delay: 0.2s;
+
       @media screen and (min-width: $tablet-bg) {
         text-align: left;
         opacity: 1;
@@ -296,6 +323,7 @@
       &.nav-in {
         left: 0;
       }
+
       @media screen and (min-width: $tablet-bg) {
         position: absolute;
         width: 5px;
@@ -308,6 +336,7 @@
           left: 0;
         }
       }
+
       @media screen and (min-width: $desktop-lg) {
         width: 50px;
         left: -100px;
@@ -330,6 +359,7 @@
     &:nth-child(6) {
       .hover-el {
         background: $grey-bg;
+
         @media screen and (min-width: $tablet-bg) {
           background: $gradient;
         }
@@ -342,6 +372,7 @@
       .hover-el {
         background: white;
         transition-delay: 0.2s;
+
         @media screen and (min-width: $tablet-bg) {
           background: $gradient;
         }

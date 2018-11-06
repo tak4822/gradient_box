@@ -1,11 +1,11 @@
 import '../util/trim';
 /*
-*  Triming string inside card for responsive
-*/
+ *  Triming string inside card for responsive
+ */
 export default {
   // Triming for card-sm
   smallCard() {
-    if($('.card-sm-container').length) {
+    if ($('.card-sm-container').length) {
       if (window.matchMedia('(max-width:340px)').matches) {
         document.querySelectorAll('.card-sm-title').forEach((el) => {
           el.innerText = el.innerText.customTrim(25);
@@ -46,9 +46,9 @@ export default {
           el.innerText = el.innerText.customTrim(25);
         })
       } else {
-          document.querySelectorAll('.card-bg-title').forEach((el) => {
-              el.innerText = el.innerText.customTrim(40);
-          })
+        document.querySelectorAll('.card-bg-title').forEach((el) => {
+          el.innerText = el.innerText.customTrim(40);
+        })
       }
     }
   },

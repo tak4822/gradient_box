@@ -1,25 +1,25 @@
-import gradientTransition from '../transitions/gradientHeader';
-import trimString from '../modules/trimStringCard';
+import gradientTransition from "../transitions/gradientHeader";
+import trimString from "../modules/trimStringCard";
 
 export default {
-  namespace: 'category',
-  onEnter: function() {
+  namespace: "category",
+  onEnter: function () {
     // このページのcontainerが読み込みを開始した時。
   },
-  onEnterCompleted: function() {
+  onEnterCompleted: function () {
     trimString.bigCard();
     // このページのトランジションが完了した時。
     gradientTransition.header();
     gradientTransition.tags();
 
-    setTimeout(function() {
+    setTimeout(function () {
       gradientTransition.entryContainer();
-    }, 1500)
+    }, 1500);
   },
-  onLeave: function() {
+  onLeave: function () {
     // 次のページへのトランジションが始まった時。
   },
-  onLeaveCompleted: function() {
+  onLeaveCompleted: function () {
     // このページのcontainerが完全に削除された時。
-  },
-}
+  }
+};

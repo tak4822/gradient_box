@@ -11,12 +11,7 @@ import posts from './views/posts';
 
 import common from './common';
 
-const views = [
-  frontPage,
-  category,
-  tags,
-  posts,
-];
+const views = [frontPage, category, tags, posts];
 
 // Load Events
 jQuery(document).ready(() => {
@@ -25,7 +20,6 @@ jQuery(document).ready(() => {
 
 // 最初のページローディングのスピードはこっちで調節
 // ページ間でのトランジションはBarba.jsで調節
-$(window).on('load', function() {
+$(window).on('load', function () {
   barbaInit(views);
 });
-

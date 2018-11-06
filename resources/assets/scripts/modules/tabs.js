@@ -1,12 +1,12 @@
 /**
  *  Tab
  */
-export default function() {
+export default function () {
   let activeNewPost = true;
 
   function changeTabStyle(el) {
-    const otherTab = ((el === 'tabPop') ? 'tabNew' : 'tabPop');
-    const direction = ((el === 'tabPop') ? '+' : '-');
+    const otherTab = el === 'tabPop' ? 'tabNew' : 'tabPop';
+    const direction = el === 'tabPop' ? '+' : '-';
     $(`#${el}`)
       .addClass('active')
       .find('.tab-bg')
@@ -25,24 +25,36 @@ export default function() {
       .css('color', '#444');
   }
 
-  $('#tabNew').on('click', function() {
-    if(!activeNewPost) {
+  $('#tabNew').on('click', function () {
+    if (!activeNewPost) {
       changeTabStyle('tabNew');
-      $('.tab-pop-wrapper').css({'opacity': '0', 'z-index': '0'});
+      $('.tab-pop-wrapper').css({
+        opacity: '0',
+        'z-index': '0'
+      });
       setTimeout(function () {
-        $('.tab-new-wrapper').css({'opacity': '1', 'z-index': '5'});
+        $('.tab-new-wrapper').css({
+          opacity: '1',
+          'z-index': '5'
+        });
       }, 500);
       activeNewPost = true;
     }
   });
 
-  $('#tabPop').on('click', function() {
-    if(activeNewPost) {
+  $('#tabPop').on('click', function () {
+    if (activeNewPost) {
       changeTabStyle('tabPop');
 
-      $('.tab-new-wrapper').css({'opacity': '0', 'z-index': '0'});
+      $('.tab-new-wrapper').css({
+        opacity: '0',
+        'z-index': '0'
+      });
       setTimeout(function () {
-        $('.tab-pop-wrapper').css({'opacity': '1', 'z-index': '5'});
+        $('.tab-pop-wrapper').css({
+          opacity: '1',
+          'z-index': '5'
+        });
       }, 500);
       activeNewPost = false;
     }

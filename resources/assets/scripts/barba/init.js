@@ -12,8 +12,12 @@ export default function(views) {
 
   // Barba Google Analytics
   Barba.Dispatcher.on('initStateChange', function() {
-    if (window.ga && (document.location.hostname != "localhost" && document.location.hostname != "xcrap.local")) {
-      gtag('config', 'UA-118467846-1', {'page_path': location.pathname}); // eslint-disable-line no-undef
+    if (
+      window.ga &&
+      (document.location.hostname != 'localhost' &&
+        document.location.hostname != 'xcrap.local')
+    ) {
+      gtag('config', 'UA-118467846-1', { page_path: location.pathname }); // eslint-disable-line no-undef
     }
   });
 
@@ -25,7 +29,8 @@ export default function(views) {
 
   views.forEach(view => Barba.BaseView.extend(view).init());
 
-  setTimeout(function() { // wait for very first loading
+  setTimeout(function() {
+    // wait for very first loading
     Barba.Pjax.start();
     Barba.Prefetch.init();
   }, 2000);

@@ -4,27 +4,33 @@
   position: relative;
   margin-bottom: 170px;
   overflow: hidden;
+
   @media screen and (min-width: $tablet) {
     width: 80%;
     margin: 100px auto 170px;
   }
+
   @media screen and (min-width: $tablet-bg) {
     width: calc(100% - 300px); // 100% - 150pxx(nav) x 2 (both side)
     margin: 160px 180px 150px;
   }
+
   @media screen and (min-width: $desktop-sm) {
     margin: 150px 170px 150px;
   }
+
   @media screen and (min-width: $nav-wide) {
     width: calc(100% - 360px); // 100% - 150pxx(nav) x 2 (both side)
     margin: 170px 180px 150px;
     height: 400px;
   }
+
   @media screen and (min-width: $desktop) {
     //width: calc(100% - 550px); // 100% - 150pxx(nav) x 2 (both side)
     margin: 170px 220px 150px;
     height: 450px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     width: calc(100% - 550px); // 100% - 150pxx(nav) x 2 (both side)
     margin: 210px 300px 180px;
@@ -59,13 +65,16 @@
 
     transition-delay: 0.3s;
     z-index: 5;
+
     @media screen and (min-width: $tablet) {
       top: 50px;
     }
+
     @media screen and (min-width: $nav-wide) {
       top: 60px;
       left: 50px;
     }
+
     @media screen and (min-width: $desktop-lg) {
       top: 80px;
       left: 70px;
@@ -75,13 +84,16 @@
       color: white;
       font-size: 2.6rem;
       line-height: 3.5rem;
+
       @media screen and (min-width: $tablet) {
         font-size: 3rem;
         line-height: normal;
       }
+
       @media screen and (min-width: $nav-wide) {
         font-size: 4rem;
       }
+
       @media screen and (min-width: $desktop-lg) {
         font-size: 5rem;
         line-height: 5.5rem;
@@ -89,13 +101,16 @@
 
       &.tag {
         font-size: 2rem;
+
         @media screen and (min-width: $tablet) {
           font-size: 2.5rem;
           line-height: normal;
         }
+
         @media screen and (min-width: $nav-wide) {
           font-size: 3.5rem;
         }
+
         @media screen and (min-width: $desktop-lg) {
           font-size: 4rem;
           line-height: 5.5rem;
@@ -107,6 +122,7 @@
       color: white;
       font-weight: 400;
       margin-top: -5px;
+
       @media screen and (min-width: $desktop-lg) {
         font-size: 1rem;
       }
@@ -125,11 +141,13 @@
 
     transition-delay: 0.8s;
     z-index: 5;
+
     @media screen and (min-width: $tablet) {
       right: -3px;
       font-size: 2.4rem;
       line-height: 1.3rem;
     }
+
     @media screen and (min-width: $nav-wide) {
       font-size: 3.2rem;
       line-height: 1.7rem;

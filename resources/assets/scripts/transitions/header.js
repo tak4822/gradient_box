@@ -1,8 +1,8 @@
-import logoAnimation from "../modules/logoAnimation";
+import logoAnimation from '../modules/logoAnimation';
 
 export default {
   logo() {
-    if(window.matchMedia('(max-width:900px)').matches) {
+    if (window.matchMedia('(max-width:900px)').matches) {
       $('.bird').addClass('bird-walking-mobile');
     } else {
       $('.bird').addClass('bird-walking-desktop');
@@ -14,18 +14,19 @@ export default {
     setTimeout(function() {
       $.each($letters, function(i) {
         $letters
-        .eq(i)
-        .delay(i * 100)
-        .queue(function(next) {
-          $(this).css({'transition-delay': '0.3s','opacity': 1});
-          $(this).addClass('logo-bounce');
-          next();
-        })
+          .eq(i)
+          .delay(i * 100)
+          .queue(function(next) {
+            $(this).css({ 'transition-delay': '0.3s', opacity: 1 });
+            $(this).addClass('logo-bounce');
+            next();
+          });
       });
     }, 1000);
 
-    setTimeout(function() { // wait for first loading header animation
-      $letters.css({'transition-delay': '0s'});
+    setTimeout(function() {
+      // wait for first loading header animation
+      $letters.css({ 'transition-delay': '0s' });
       logoAnimation();
     }, 2400);
   },
@@ -38,16 +39,15 @@ export default {
     const $list = $('.menu-item');
     $.each($list, function(i) {
       $list
-      .eq(i)
-      .delay(i * 100)
-      .queue(function(next) {
-        $(this).css({
-          'opacity': '1',
-          'transform': 'translateX(0)',
+        .eq(i)
+        .delay(i * 100)
+        .queue(function(next) {
+          $(this).css({
+            opacity: '1',
+            transform: 'translateX(0)'
+          });
+          next();
         });
-        next();
-      })
     });
-  },
-}
-
+  }
+};

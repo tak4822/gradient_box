@@ -1,8 +1,5 @@
 @import "common/variables";
 
-/** Import everything from autoload */
-@import "./autoload/**/*";
-
 /**
  * Import npm dependencies
  *
@@ -33,6 +30,7 @@
 @import "components/toc";
 @import "components/shortcode";
 @import "components/posts_extra";
+
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/pages";

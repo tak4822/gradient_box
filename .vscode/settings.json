@@ -1,4 +1,11 @@
 {
   "editor.tabSize": 2,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.singleQuote": true,
+  "beautify.language": {
+    "html": [
+      "blade.php"
+    ]
+  },
 }

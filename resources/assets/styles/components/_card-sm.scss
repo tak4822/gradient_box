@@ -6,13 +6,16 @@
   width: 94%;
   margin: 40px auto;
   background: white;
+
   @media screen and (min-width: $tablet) {
     height: 180px;
     margin: 60px auto;
   }
+
   @media screen and (min-width: $tablet-bg) {
     width: 90%;
   }
+
   @media screen and (min-width: $desktop-md) {
     height: 240px;
   }
@@ -25,11 +28,13 @@
     height: 130px;
     z-index: 2;
     transition: all 0.3s ease-in-out;
+
     @media screen and (min-width: $tablet) {
       width: 180px;
       height: 180px;
       left: 20px;
     }
+
     @media screen and (min-width: $desktop-md) {
       width: 240px;
       height: 240px;
@@ -55,11 +60,13 @@
     width: 130px;
     height: 130px;
     background: linear-gradient(to top right, #ffd31c, #fd2fe5);
+
     @media screen and (min-width: $tablet) {
       width: 180px;
       height: 180px;
       left: 20px;
     }
+
     @media screen and (min-width: $desktop-md) {
       width: 240px;
       height: 240px;
@@ -71,11 +78,13 @@
     top: 8px;
     left: 150px;
     padding-right: 5px;
+
     @media screen and (min-width: $tablet) {
       top: 15px;
       left: 220px;
       padding-right: 20px;
     }
+
     @media screen and (min-width: $desktop-md) {
       left: 280px;
       top: 25px;
@@ -94,6 +103,7 @@
       height: 20px;
       background: $gradient;
       margin-right: 8px;
+
       @media screen and (min-width: $desktop-md) {
         width: 5px;
         height: 25px;
@@ -103,6 +113,7 @@
     .cat-text {
       font-size: 0.8rem;
       padding-top: 3px;
+
       @media screen and (min-width: $desktop-md) {
         font-size: 1rem;
       }
@@ -115,11 +126,13 @@
     font-weight: bold;
     line-height: 1.35rem;
     color: $head;
+
     @media screen and (min-width: $tablet) {
       font-size: 1.15rem;
       margin: 10px 0;
       line-height: 1.6rem;
     }
+
     @media screen and (min-width: $desktop-md) {
       font-size: 1.5rem;
       line-height: 2.2rem;
@@ -129,11 +142,13 @@
 
   .card-sm-description {
     display: none;
+
     @media screen and (min-width: $tablet) {
       display: block;
       font-size: 0.8rem;
       line-height: 1.3rem;
     }
+
     @media screen and (min-width: $desktop-md) {
       font-size: 0.9rem;
       line-height: 1.5rem;

@@ -4,7 +4,9 @@ export default {
       .css('transform', 'translateY(0)')
       .delay(200)
       .queue(function(next) {
-        $(this).siblings('.thumb-container').css('transform', 'translateX(0)');
+        $(this)
+          .siblings('.thumb-container')
+          .css('transform', 'translateX(0)');
         next();
       })
       .delay(600)
@@ -26,24 +28,24 @@ export default {
       .queue(function(next) {
         $('.desc-card .navigation').css('transform', 'rotateX(0deg)');
         $('.desc-card .title').css({
-          'transform': 'translateX(0)',
-          'opacity': '1',
+          transform: 'translateX(0)',
+          opacity: '1'
         });
         $('.slider-short-description').css({
-          'transform': 'translateX(0)',
-          'opacity': '1',
+          transform: 'translateX(0)',
+          opacity: '1'
         });
         $('.tab-container').css('opacity', 1);
 
         // Button
         $('.tablet-bg-button .deco').css({
-          'transform': 'translateX(0)',
+          transform: 'translateX(0)'
         });
         $('.tablet-bg-button .text').css({
-          'transform': 'translateX(0)',
-          'opacity': '1',
+          transform: 'translateX(0)',
+          opacity: '1'
         });
         next();
       });
-  },
-}
+  }
+};

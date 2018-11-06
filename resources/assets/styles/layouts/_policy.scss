@@ -11,6 +11,7 @@
 
   .inner-contents {
     padding: 20px;
+
     @media screen and (min-width: $tablet-bg) {
       padding: 60px;
     }

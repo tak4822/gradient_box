@@ -8,10 +8,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
   @media screen and (min-width: $tablet-bg) {
     width: 700px;
     margin-left: 180px;
   }
+
   //@media screen and (min-width: $nav-wide) {
   //  width: calc(80% - 180px);
   //  margin-left: calc(180px + 10%);
@@ -23,15 +25,18 @@
     left: 880px;
     margin-left: 0;
   }
+
   @media screen and (min-width: $desktop) {
     width: calc(100% - 970px);
     left: 970px;
   }
+
   @media screen and (min-width: $desktop-md) {
     width: calc(100% - 1020px);
     top: calc(100vh + 350px);
     left: 1020px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     width: calc(100% - 1050px);
     left: 1050px;
@@ -43,9 +48,11 @@
     background: $green;
     width: 100%;
     height: 320px;
+
     @media screen and (min-width: $tablet) {
       height: 400px;
     }
+
     @media screen and (min-width: $sidebar) {
       height: 320px;
       order: 1;
@@ -56,9 +63,11 @@
       color: white;
       margin-bottom: 20px;
       font-weight: bold;
+
       @media screen and (min-width: $tablet) {
         font-size: 2.4rem;
       }
+
       @media screen and (min-width: $sidebar) {
         font-size: 1.6rem;
       }
@@ -75,6 +84,7 @@
           width: 150px;
           align-self: center;
         }
+
         @media screen and (min-width: $sidebar) {
           width: 120px;
         }
@@ -85,6 +95,7 @@
         max-width: 300px;
         margin-left: 10px;
         color: white;
+
         @media screen and (min-width: $sidebar) {
           font-size: 0.9rem;
         }
@@ -116,10 +127,12 @@
   margin-bottom: 50px;
   width: 92%;
   max-width: 600px;
+
   @media screen and (min-width: $tablet) {
     margin-top: 50px;
     margin-bottom: 80px;
   }
+
   @media screen and (min-width: $sidebar) {
     order: 2;
   }
@@ -136,6 +149,7 @@
   margin-top: 30px;
   padding-top: 30px;
   margin-bottom: 50px;
+
   @media screen and (min-width: $sidebar) {
     order: 3;
   }
@@ -149,9 +163,11 @@
     display: flex;
     align-items: center;
     margin-left: 3%;
+
     @media screen and (min-width: $tablet) {
       margin-left: 5%;
     }
+
     @media screen and (min-width: $sidebar) {
       margin-left: 7.5%;
     }
@@ -168,12 +184,15 @@
     font-size: 2rem;
     font-weight: 600;
     padding-top: 8px;
+
     @media screen and (min-width: $tablet) {
       font-size: 2.5rem;
     }
+
     @media screen and (min-width: $sidebar) {
       font-size: 2rem;
     }
+
     @media screen and (min-width: $desktop) {
       font-size: 2.3rem;
     }

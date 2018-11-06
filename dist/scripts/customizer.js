@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "92a2292008b4620a965c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "419dfd246deb7580fa15"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(54)(__webpack_require__.s = 54);
+/******/ 	return hotCreateRequire(51)(__webpack_require__.s = 51);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2351,10 +2351,7 @@ module.exports = function(hash, moduleMap, options) {
 /* 48 */,
 /* 49 */,
 /* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */
+/* 51 */
 /*!***************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/customizer.js ***!
   \***************************************************************************/
@@ -2363,11 +2360,11 @@ module.exports = function(hash, moduleMap, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/tak/Desktop/projects/canarie/wordpress/wp-content/themes/gradient_box/resources/assets/build/util/../helpers/hmr-client.js */3);
-module.exports = __webpack_require__(/*! ./scripts/customizer.js */55);
+module.exports = __webpack_require__(/*! ./scripts/customizer.js */52);
 
 
 /***/ }),
-/* 55 */
+/* 52 */
 /*!*******************************!*\
   !*** ./scripts/customizer.js ***!
   \*******************************/

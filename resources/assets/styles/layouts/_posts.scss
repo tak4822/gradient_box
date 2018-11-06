@@ -1,6 +1,7 @@
 .post-header {
   width: 100%;
   padding-top: 20px;
+
   //@media screen and (min-width: $tablet) {
   //  padding-top: 120px;
   //}
@@ -9,6 +10,7 @@
     width: calc(80% - 180px);
     margin-left: calc(180px + 10%);
   }
+
   @media screen and (min-width: $desktop-sm) {
     padding-top: 150px;
     display: flex;
@@ -17,14 +19,17 @@
     margin-left: 180px;
     height: 100vh;
   }
+
   @media screen and (min-width: $nav-wide) {
     padding-top: 160px;
     margin-left: 180px;
   }
+
   @media screen and (min-width: $desktop) {
     padding-top: 180px;
     margin-left: 220px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     margin-left: 250px;
     padding-top: 210px;
@@ -36,29 +41,35 @@
   margin: 30px auto 50px;
   position: relative;
   @include slide-in(20px);
+
   @media screen and (min-width: $tablet-bg) {
     width: 100%;
   }
+
   @media screen and (min-width: $desktop-sm) {
     width: 350px;
     height: 350px;
     align-self: flex-start;
     margin: 0;
   }
+
   @media screen and (min-width: $nav-wide) {
     width: 400px;
     height: 400px;
   }
+
   @media screen and (min-width: $sidebar) {
     width: 450px;
     height: 450px;
     align-self: flex-start;
     margin: 0;
   }
+
   @media screen and (min-width: $desktop) {
     width: 500px;
     height: 500px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     width: 550px;
     height: 550px;
@@ -86,17 +97,21 @@
 .article-header {
   width: 90%;
   margin: 20px auto 50px;
+
   @media screen and (min-width: $tablet-bg) {
     width: 100%;
   }
+
   @media screen and (min-width: $desktop-sm) {
     width: 440px;
     align-self: flex-start;
     margin: 20px 0 0 40px;
   }
+
   @media screen and (min-width: $sidebar) {
     margin: 20px 0 0 60px;
   }
+
   @media screen and (min-width: $desktop) {
     margin: 30px 0 0 60px;
     width: 500px;
@@ -125,9 +140,11 @@
     @include slide-in;
 
     transition-delay: 0.2s;
+
     @media screen and (min-width: $tablet) {
       width: 35px;
     }
+
     @media screen and (min-width: $desktop-lg) {
       height: 6px;
     }
@@ -150,20 +167,25 @@
     @include slide-in;
 
     transition-delay: 0.4s;
+
     @media screen and (min-width: $tablet) {
       font-size: 1.8rem;
       line-height: normal;
     }
+
     @media screen and (min-width: $tablet-bg) {
       font-size: 2.4rem;
     }
+
     @media screen and (min-width: $desktop-sm) {
       font-size: 1.6rem;
       margin-top: 10px;
     }
+
     @media screen and (min-width: $desktop) {
       font-size: 1.8rem;
     }
+
     @media screen and (min-width: $desktop-lg) {
       font-size: 2.4rem;
     }
@@ -179,17 +201,21 @@
     @include slide-in;
 
     transition-delay: 0.5s;
+
     @media screen and (min-width: $tablet) {
       font-size: 1.2rem;
     }
+
     @media screen and (min-width: $tablet-bg) {
       font-size: 1.6rem;
     }
+
     @media screen and (min-width: $desktop-sm) {
       font-size: 1.2rem;
       margin-top: 5px;
       margin-bottom: 20px;
     }
+
     @media screen and (min-width: $desktop-lg) {
       font-size: 1.6rem;
     }
@@ -205,10 +231,12 @@
   @include slide-in;
 
   transition-delay: 0.7s;
+
   @media screen and (min-width: $tablet-bg) {
     font-size: 1rem;
     line-height: 1.7rem;
   }
+
   @media screen and (min-width: $desktop-sm) {
     font-size: 0.9rem;
     line-height: 1.6rem;
@@ -222,6 +250,7 @@
   @include slide-in;
 
   transition-delay: 0.9s;
+
   @media screen and (min-width: $desktop) {
     padding-top: 15px;
   }
@@ -276,32 +305,39 @@
   line-height: 1.8rem;
   opacity: 0;
   transition: all 1s ease;
+
   @media screen and (min-width: $tablet) {
     width: 80%;
     font-size: 1rem;
   }
+
   @media screen and (min-width: $tablet-bg) {
     width: calc(90% - 180px);
     margin-left: calc(180px + 5%);
     font-size: 1rem;
     line-height: 2rem;
   }
+
   @media screen and (min-width: $nav-wide) {
     width: calc(90% - 180px);
     margin-left: calc(180px + 5%);
   }
+
   @media screen and (min-width: $sidebar) {
     width: 700px;
     margin-left: 180px;
     padding: 0 30px;
   }
+
   @media screen and (min-width: $desktop) {
     width: 750px;
     margin-left: 220px;
   }
+
   @media screen and (min-width: $desktop-md) {
     width: 800px;
   }
+
   @media screen and (min-width: $desktop-lg) {
     margin-left: 250px;
   }
@@ -365,10 +401,12 @@
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 50px;
+
   @media screen and (min-width: $sidebar) {
     margin-left: 200px;
     justify-content: flex-start;
   }
+
   @media screen and (min-width: $desktop-lg) {
     margin-left: 310px;
   }
@@ -382,6 +420,7 @@
 
     color: white;
     background: $red;
+
     @media screen and (min-width: $tablet) {
       width: 50px;
       height: 50px;
@@ -399,9 +438,11 @@
 // tags
 .article-tags-container {
   padding: 30px 0 10px;
+
   @media screen and (min-width: $tablet) {
     padding: 60px 30px 30px;
   }
+
   @media screen and (min-width: $desktop-sm) {
     padding: 60px 50px 30px;
   }
@@ -435,6 +476,7 @@
   @media screen and (min-width: $tablet) {
     padding: 50px 30px;
   }
+
   @media screen and (min-width: $desktop-sm) {
     padding: 50px;
   }

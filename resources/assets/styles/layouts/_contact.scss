@@ -10,6 +10,7 @@
   background: $grey-bg;
   padding: 10px;
   margin-bottom: 250px;
+
   @media screen and (min-width: $nav-wide) {
     padding: 20px;
     max-width: 800px;
@@ -20,6 +21,7 @@
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 20px;
+
     @media screen and (min-width: $nav-wide) {
       flex-direction: row;
     }
@@ -29,6 +31,7 @@
       font-size: 0.9rem;
       font-weight: 600;
       color: $text;
+
       @media screen and (min-width: $nav-wide) {
         width: 150px;
         margin-bottom: 0;
@@ -77,6 +80,7 @@
     outline: none;
     border: none;
     margin: 30px auto 10px;
+
     @media screen and (min-width: $nav-wide) {
       margin-left: 150px;
       width: calc(100% - 150px);

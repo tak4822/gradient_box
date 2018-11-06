@@ -3,23 +3,23 @@ import trimString from '../modules/trimStringCard';
 
 export default {
   namespace: 'tags',
-  onEnter: function() {
+  onEnter: function () {
     // このページのcontainerが読み込みを開始した時。
   },
-  onEnterCompleted: function() {
+  onEnterCompleted: function () {
     // このページのトランジションが完了した時。
     trimString.bigCard();
 
     gradientTransition.header();
 
-    setTimeout(function() {
+    setTimeout(function () {
       gradientTransition.entryContainer();
-    }, 1000)
+    }, 1000);
   },
-  onLeave: function() {
+  onLeave: function () {
     // 次のページへのトランジションが始まった時。
   },
-  onLeaveCompleted: function() {
+  onLeaveCompleted: function () {
     // このページのcontainerが完全に削除された時。
-  },
-}
+  }
+};

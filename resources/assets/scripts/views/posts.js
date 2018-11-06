@@ -15,7 +15,6 @@ export default {
     trimString.smallCard();
     sidebar.fixArticles();
 
-
     postsTransition.header();
     setTimeout(function() {
       postsTransition.contents();
@@ -26,5 +25,5 @@ export default {
   },
   onLeaveCompleted: function() {
     // このページのcontainerが完全に削除された時。
-  },
-}
+  }
+};
