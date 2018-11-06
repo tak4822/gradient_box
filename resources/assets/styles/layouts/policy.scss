@@ -1,0 +1,32 @@
+.policy-container {
+  width: 100%;
+  margin: auto;
+
+  .head {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    border-bottom: 2px solid $text;
+  }
+
+  .inner-contents {
+    padding: 20px;
+    @media screen and (min-width: $tablet-bg) {
+      padding: 60px;
+    }
+
+    ul {
+      margin: 50px auto;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .inner-title {
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+  }
+}

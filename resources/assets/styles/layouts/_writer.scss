@@ -1,0 +1,16 @@
+.writer-container {
+  @media screen and (min-width: $nav-wide) {
+    max-width: 800px;
+  }
+
+  .contents {
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .writer-form-container {
+    margin-top: 40px;
+  }
+}

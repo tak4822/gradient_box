@@ -1,0 +1,93 @@
+.contact-container {
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}
+
+.wpcf7-form {
+  width: 100%;
+  background: $grey-bg;
+  padding: 10px;
+  margin-bottom: 250px;
+  @media screen and (min-width: $nav-wide) {
+    padding: 20px;
+    max-width: 800px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $nav-wide) {
+      flex-direction: row;
+    }
+
+    label {
+      margin-bottom: -10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $text;
+      @media screen and (min-width: $nav-wide) {
+        width: 150px;
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+
+      .required {
+        color: $red;
+      }
+    }
+
+    .wpcf7-form-control-wrap {
+      @media screen and (min-width: $nav-wide) {
+        flex: 1;
+      }
+    }
+
+    input,
+    textarea {
+      outline: none;
+      border: none;
+      background: white;
+      border-radius: 2px;
+      width: 100%;
+      height: 50px;
+      font-size: 0.9rem;
+      padding: 5px 5px 5px 10px;
+    }
+
+    textarea {
+      min-height: 200px;
+      padding-top: 10px;
+    }
+  }
+
+  .wpcf7-submit {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background: $gradient;
+    outline: none;
+    border: none;
+    margin: 30px auto 10px;
+    @media screen and (min-width: $nav-wide) {
+      margin-left: 150px;
+      width: calc(100% - 150px);
+    }
+  }
+}
+
+div.wpcf7-response-output {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  margin: 0;
+}

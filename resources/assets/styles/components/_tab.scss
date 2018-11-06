@@ -1,0 +1,257 @@
+.tab-container {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.tab-buttons-wrapper {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
+  @media screen and (min-width: $tablet-bg) {
+    display: none;
+  }
+
+  .tab-button {
+    flex: 1;
+    height: 100%;
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    @include flex-center;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 1.2rem;
+    }
+
+    .active-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: $red;
+      height: 4px;
+      transform: translateX(-100%);
+      transition: all 0.6s cubic-bezier(0.61, 0, 0.44, 0.99);
+    }
+
+    .tab-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $grey-bg;
+      z-index: -2;
+      transform: translateX(-100%);
+      transition: all 0.6s cubic-bezier(0.61, 0, 0.44, 0.99);
+    }
+
+    .tab-text {
+      transition: all 0.6s cubic-bezier(0.61, 0, 0.44, 0.99);
+      transition-delay: 0.2s;
+    }
+
+    &#tabNew {
+      .active-line,
+      .tab-bg {
+        transform: translateX(0);
+      }
+
+      p {
+        color: $red;
+      }
+
+      &.active {
+        .active-line {
+          transition-delay: 0.2s;
+        }
+
+        .tab-text {
+          animation: 1s slide-text-to-left 0.2s ease forwards;
+        }
+      }
+    }
+
+    &#tabPop {
+      &.active {
+        .tab-bg {
+          transition-delay: 0.2s;
+        }
+
+        .active-line {
+          transition-delay: 0.4s;
+        }
+
+        .tab-text {
+          animation: 1s slide-text-to-right 0.2s ease forwards;
+        }
+      }
+    }
+  }
+}
+
+.tab-card-wrapper {
+  position: relative;
+  height: 990px;
+  background: $grey-bg;
+
+  @media screen and (min-width: $tablet) {
+    height: 1450px;
+  }
+  @media screen and (min-width: $tablet-bg) {
+    margin-left: 180px;
+    width: 700px;
+    background: transparent;
+    height: auto;
+  }
+  @media screen and (min-width: $nav-wide) {
+    margin-left: 180px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 750px;
+    margin-left: 220px;
+  }
+  @media screen and (min-width: $desktop-md) {
+    width: 800px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    margin-left: 250px;
+  }
+}
+
+.tab-new-wrapper,
+.tab-pop-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $grey-bg;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  @media screen and (min-width: $tablet-bg) {
+    background: transparent;
+    position: static;
+    opacity: 1;
+    margin-bottom: 100px;
+  }
+
+  &.active {
+    z-index: 5;
+    opacity: 1;
+  }
+
+  .tab-card-inside-wrapper {
+    @media screen and (min-width: $tablet-bg) {
+      margin-top: -180px;
+    }
+    @media screen and (min-width: $desktop-md) {
+      margin-top: -200px;
+    }
+  }
+
+  .tab-view-more-button {
+    width: 94%;
+    margin: auto;
+    height: 70px;
+    background: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow-light;
+    @media screen and (min-width: $tablet-bg) {
+      display: none;
+    }
+
+    .text {
+      color: white;
+      font-size: 1.1rem;
+      padding-right: 15px;
+    }
+
+    .arrow-right {
+      width: 12px;
+      fill: white;
+    }
+  }
+}
+
+.tab-desk-header {
+  display: none;
+  @media screen and (min-width: $tablet-bg) {
+    display: block;
+    width: 100%;
+    height: 280px;
+    position: relative;
+    background: $gradient;
+    @media screen and (min-width: $desktop-md) {
+      height: 350px;
+    }
+
+    .title-container {
+      position: absolute;
+      top: 40px;
+      left: 5%;
+      @media screen and (min-width: $desktop-md) {
+        top: 60px;
+        left: 7.5%;
+      }
+
+      .tab-desk-title {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        @media screen and (min-width: $desktop-md) {
+          font-size: 2.4rem;
+        }
+      }
+
+      .deco {
+        width: 40px;
+        height: 6px;
+        background: white;
+      }
+    }
+
+    .button-container {
+      position: absolute;
+      top: 40px;
+      right: 5%;
+      width: 100px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (min-width: $desktop-md) {
+        top: 60px;
+        width: 120px;
+        right: 7.5%;
+      }
+
+      .text {
+        color: white;
+        margin-top: -2px;
+        font-weight: 400;
+        @media screen and (min-width: $desktop-md) {
+          font-size: 1.2rem;
+        }
+      }
+
+      img {
+        width: 8px;
+        transition: transform 0.6s ease-out;
+      }
+    }
+
+    &:hover {
+      .button-container img {
+        transform: translateX(8px);
+      }
+    }
+  }
+}

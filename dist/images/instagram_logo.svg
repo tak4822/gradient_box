@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="9641.393 2677.253 25.267 23.937">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        stroke: #95989a;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_40" data-name="Rectangle 40" class="cls-1" width="25.267" height="23.937" transform="translate(0 0)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_2" data-name="Mask Group 2" class="cls-2" transform="translate(9641.393 2677.253)">
+    <g id="_003-instagram-social-network-logo-of-photo-camera" data-name="003-instagram-social-network-logo-of-photo-camera" transform="translate(0.665 0)">
+      <path id="Path_7" data-name="Path 7" class="cls-3" d="M3.072,0H20.865a3,3,0,0,1,3.072,3.072V20.865a3,3,0,0,1-3.072,3.072H3.072A3,3,0,0,1,0,20.865V3.072A3,3,0,0,1,3.072,0ZM17.437,2.66A1.08,1.08,0,0,0,16.36,3.737V6.317a1.08,1.08,0,0,0,1.077,1.078h2.705A1.081,1.081,0,0,0,21.22,6.317V3.737A1.081,1.081,0,0,0,20.143,2.66Zm3.794,7.463H19.125a7,7,0,0,1,.307,2.053,7.328,7.328,0,0,1-7.441,7.209,7.327,7.327,0,0,1-7.44-7.209,6.989,6.989,0,0,1,.307-2.053H2.66V20.234a.954.954,0,0,0,.952.952H20.28a.954.954,0,0,0,.952-.952V10.123ZM11.991,7.258a4.735,4.735,0,0,0-4.807,4.658,4.735,4.735,0,0,0,4.807,4.658A4.735,4.735,0,0,0,16.8,11.917,4.735,4.735,0,0,0,11.991,7.258Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,173 @@
+/* stylelint-disable */
+body {
+  font-family: -apple-system, blinkMacSystemFont, /* Macの欧文はSan Francisco (OS X 10.11以降) */
+  'Helvetica Neue', /* Macの欧文 (OS X 10.10以前) */
+  'Segoe UI',       /* Windowsの欧文 */
+  YuGothicM,        /* Windows8.1以上は游ゴシック */
+  YuGothic,         /* Macの游ゴシック */
+  Meiryo,           /* 游ゴシックが入っていないWindows */
+  sans-serif;
+}
+/* IE8〜11はメイリオ */
+@media screen\0 {
+  body {
+    font-family: 'Segoe UI', /* Windowsの欧文 */
+    Meiryo,     /* メイリオ */
+    sans-serif;
+  }
+}
+
+/* Windows */
+@font-face {
+  font-family: YuGothicM;
+  font-weight: normal;
+  src: local('YuGothic-Medium'),  /* Mediumを明示的に指定 */
+  local('Yu Gothic Medium'), /* Chrome用 */
+  local('YuGothic-Regular'); /* Windows8.1ではMediumがないのでRegularを指定 */
+}
+@font-face {
+  font-family: YuGothicM;
+  font-weight: bold;
+  src: local('YoGothic-Bold'), /* Boldはそのまま */
+  local('Yu Gothic');     /* Chrome用 */
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirLTStd-Black.WOFF');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirLTStd-Book.WOFF');
+  font-weight: 400;
+}
+
+.nav li a,
+button > p,
+.newsLetter-title,
+.mailpoet_submit,
+.tab-button p,
+.side-container .side-line .button-text,
+.cat-text,
+#slider-category,
+.tab-view-more-button p,
+.cat-hero-container .title,
+.cat-hero-container .tags-tile,
+.card-date,
+.date,
+.interviewer,
+.author-container .title,
+.other-articles-title,
+.tablet-bg-button .text,
+.tab-desk-header .tab-desk-title,
+.tab-desk-header .text,
+.toc-num,
+.author-title,
+.author-introduce .name,
+.article-tags-container .title {
+  font-family: 'Avenir', 'Helvetica Neue', 'Segoe UI', sans-serif;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  overflow-x: hidden;
+}
+
+.wrap.container {
+  margin: $headerHeight 0 0;
+  @media screen and (min-width: $tablet) {
+    margin: $headerHeight-tablet 0 0;
+    font-size: 15px;
+  }
+  @media screen and (min-width: $tablet-bg) {
+    margin: 0;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: $text;
+}
+
+a {
+  text-decoration: none;
+  color: $head;
+}
+
+input {
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  outline: none;
+  border: 0;
+  height: 55px;
+
+  @include flex-center;
+
+  p {
+    margin-top: 5px;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+}
+
+.reveal-wrapper {
+  overflow: hidden;
+}
+
+.site-wrap {
+  opacity: 0;
+  perspective: 800px;
+}
+
+.regular-contents {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 120px;
+  }
+  @media screen and (min-width: $tablet-bg) {
+    width: calc(80% - 150px);
+    padding-top: 160px;
+    margin-left: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media screen and (min-width: $desktop-sm) {
+    margin-left: 150px;
+  }
+  @media screen and (min-width: $nav-wide) {
+    padding-top: 200px;
+    margin-left: 200px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    padding-top: 220px;
+    margin-left: 300px;
+  }
+
+  .contents-title {
+    color: $head;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    @media screen and (min-width: $nav-wide) {
+      margin-top: 0;
+    }
+  }
+}

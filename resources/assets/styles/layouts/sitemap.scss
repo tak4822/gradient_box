@@ -1,0 +1,26 @@
+.sitemap-container {
+  margin-bottom: 350px;
+
+  ul {
+    list-style: none;
+    padding-left: 10px;
+
+    li {
+      margin: 20px;
+
+      .sitemap-bg-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      li {
+        float: left;
+        display: inline;
+
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,305 @@
+// Short code
+.custom-heading {
+  background: $grey-bg;
+  padding: 10px;
+  margin: 60px auto 20px;
+  position: relative;
+
+  .custom-heading-deco {
+    width: 5px;
+    height: 100%;
+    background: $gradient;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @media screen and (min-width: $tablet) {
+      width: 8px;
+    }
+  }
+
+  .custom-heading-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 4px;
+    @media screen and (min-width: $tablet) {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+.custom-red {
+  margin: 40px auto 20px;
+  position: relative;
+  @media screen and (min-width: $tablet) {
+    margin: 60px auto 20px;
+  }
+
+  .custom-red-deco {
+    width: 5px;
+    height: 100%;
+    background: $red;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .custom-red-text {
+    font-size: 1rem;
+    margin-bottom: 3px;
+    color: $red;
+    padding-left: 20px;
+    @media screen and (min-width: $tablet) {
+      font-size: 1.3rem;
+    }
+    @media screen and (min-width: $tablet-bg) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.custom-note {
+  background: $grey-bg;
+  margin: 20px auto;
+  padding: 5%;
+
+  .custom-note-text {
+    font-size: 0.8rem;
+    @media screen and (min-width: $tablet-bg) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.nlink {
+  display: block;
+  width: 100%;
+  border: 1px solid $grey;
+  padding: 10px;
+  margin: 30px 0;
+  text-decoration: none;
+  @media screen and (min-width: $card-bg) {
+    padding: 15px;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .nlink-img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    @media screen and (min-width: $card-bg) {
+      width: 160px;
+      height: 160px;
+    }
+    @media screen and (min-width: $desktop-lg) {
+      width: 220px;
+      height: 220px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .entry-content a.nlink {
+    text-decoration: none;
+  }
+
+  .title {
+    float: left;
+    width: calc(100% - 100px);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    padding-left: 10px;
+    height: 85px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    @media screen and (min-width: $card-bg) {
+      overflow: visible;
+      height: auto;
+      width: calc(100% - 160px);
+    }
+    @media screen and (min-width: $sidebar) {
+      font-size: 1.4rem;
+    }
+    @media screen and (min-width: $desktop-lg) {
+      width: calc(100% - 220px);
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    @media screen and (min-width: $card-bg) {
+      width: calc(100% - 160px);
+      float: left;
+      padding-left: 10px;
+    }
+    @media screen and (min-width: $desktop-lg) {
+      font-size: 0.9rem;
+      width: calc(100% - 220px);
+    }
+  }
+}
+
+.article-thumb-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  @media screen and (min-width: $tablet-bg) {
+    flex-direction: row;
+    margin: 35px auto;
+  }
+
+  &.left {
+    align-items: flex-start;
+    @media screen and (min-width: $tablet-bg) {
+      align-items: center;
+    }
+  }
+
+  &.right {
+    align-items: flex-end;
+    @media screen and (min-width: $tablet-bg) {
+      align-items: center;
+    }
+  }
+
+  .thumb-container {
+    width: 30px;
+
+    .thumb-wrapper {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.16);
+      @media screen and (min-width: $tablet-bg) {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 0;
+      }
+    }
+
+    &.left {
+      margin-left: 10px;
+      @media screen and (min-width: $tablet-bg) {
+        order: 1;
+      }
+    }
+
+    &.right {
+      margin-right: 10px;
+      @media screen and (min-width: $tablet-bg) {
+        order: 3;
+      }
+    }
+  }
+
+  .thumb-contents {
+    flex: 1;
+    order: 2;
+    position: relative;
+    //box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      margin-top: -10px;
+      border: 10px solid transparent;
+      z-index: 2;
+      transform-origin: center;
+      @media screen and (min-width: $tablet-bg) {
+        top: 50%;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &.left {
+      align-self: flex-start;
+      background: #fff7e2;
+      @media screen and (min-width: $tablet-bg) {
+        margin: 0 75px 0 35px;
+      }
+
+      &::before {
+        left: 15px;
+        transform: rotate(90deg);
+        border-right: 10px solid #fff7e2;
+        @media screen and (min-width: $tablet-bg) {
+          transform: rotate(0);
+          left: -18px;
+        }
+      }
+    }
+
+    &.right {
+      align-self: flex-end;
+      background: $grey-bg;
+      @media screen and (min-width: $tablet-bg) {
+        margin: 0 35px 0  75px;
+      }
+
+      &::before {
+        right: 15px;
+        transform: rotate(-90deg);
+        border-left: 10px solid $grey-bg;
+        @media screen and (min-width: $tablet-bg) {
+          transform: rotate(0);
+          right: -18px;
+        }
+      }
+    }
+  }
+}
+
+.interview-para {
+  margin-bottom: 20px;
+
+  .article-interviewer {
+    color: $yellow;
+  }
+
+  .article-interviewee {
+    color: $pink;
+  }
+}
+
+.article-marker {
+  font-weight: bold;
+
+  &.yellow {
+    background: linear-gradient(transparent 60%, $yellow 0%);
+  }
+
+  &.pink {
+    background: linear-gradient(transparent 60%, #ff95cc 0%);
+  }
+}

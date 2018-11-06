@@ -1,0 +1,16 @@
+.entry-content {
+  .tablepress tfoot th,
+  .tablepress thead th {
+    background: $red;
+    color: white;
+  }
+
+  .tablepress tbody td,
+  .tablepress tfoot th {
+    border-top: none;
+  }
+}
+
+.article-top-space {
+  height: 30px;
+}

@@ -1,0 +1,36 @@
+.category-container {
+  padding-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+  z-index: 10;
+  @media screen and (min-width: $sidebar) {
+    margin-left: 220px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    margin-left: 250px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+
+  .pagination-item {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 50px;
+    border: 1px solid $red;
+    color: $red;
+    @include flex-center;
+
+    &.current {
+      color: white;
+      background: $red;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.tag-wrapper {
+  display: block;
+  border: 1px solid $red;
+  width: 30px;
+  position: relative;
+  background: white;
+  transition: transform 0.6s ease-in-out, background 0.01s ease-in-out 0.3s;
+  @media screen and (min-width: $desktop-sm) {
+    width: 40px;
+  }
+
+  &.pull-right {
+    float: right;
+    margin-right: 25px;
+    display: block;
+  }
+
+  &.pull-left {
+    float: left;
+    margin-left: 10px;
+    display: block;
+    @media screen and (min-width: $card-bg) {
+      margin-left: 20px;
+    }
+  }
+
+  .tag-deco {
+    height: 28px;
+    // width: 12px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 7px);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .tag-text {
+    writing-mode: vertical-rl;
+    width: 14px;
+    line-height: 14px;
+    position: relative;
+    left: calc(50% - 8px);
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding-top: 22px;
+    padding-bottom: 5px;
+    transition-delay: 0.3s;
+
+    @media screen and (min-width: $card-bg) {
+      width: 18px;
+      left: calc(50% - 10px);
+      line-height: 18px;
+      font-size: 0.9rem;
+      padding-top: 25px;
+      padding-bottom: 8px;
+    }
+  }
+
+  &:hover {
+    transform: rotateY(180deg);
+    background: $red;
+
+    .tag-text {
+      color: white;
+      transform: rotateY(-180deg);
+    }
+  }
+}

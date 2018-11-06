@@ -1,0 +1,523 @@
+.post-header {
+  width: 100%;
+  padding-top: 20px;
+  //@media screen and (min-width: $tablet) {
+  //  padding-top: 120px;
+  //}
+  @media screen and (min-width: $tablet-bg) {
+    padding-top: 140px;
+    width: calc(80% - 180px);
+    margin-left: calc(180px + 10%);
+  }
+  @media screen and (min-width: $desktop-sm) {
+    padding-top: 150px;
+    display: flex;
+    justify-content: flex-start;
+    width: calc(100% - 180px);
+    margin-left: 180px;
+    height: 100vh;
+  }
+  @media screen and (min-width: $nav-wide) {
+    padding-top: 160px;
+    margin-left: 180px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 180px;
+    margin-left: 220px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    margin-left: 250px;
+    padding-top: 210px;
+  }
+}
+
+.featured-image {
+  width: 75%;
+  margin: 30px auto 50px;
+  position: relative;
+  @include slide-in(20px);
+  @media screen and (min-width: $tablet-bg) {
+    width: 100%;
+  }
+  @media screen and (min-width: $desktop-sm) {
+    width: 350px;
+    height: 350px;
+    align-self: flex-start;
+    margin: 0;
+  }
+  @media screen and (min-width: $nav-wide) {
+    width: 400px;
+    height: 400px;
+  }
+  @media screen and (min-width: $sidebar) {
+    width: 450px;
+    height: 450px;
+    align-self: flex-start;
+    margin: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 500px;
+    height: 500px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    width: 550px;
+    height: 550px;
+  }
+
+  .featured-image-deco {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to top right, #ffd31c, #fd2fe5);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -2;
+    transition: all 0.8s ease-out;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.article-header {
+  width: 90%;
+  margin: 20px auto 50px;
+  @media screen and (min-width: $tablet-bg) {
+    width: 100%;
+  }
+  @media screen and (min-width: $desktop-sm) {
+    width: 440px;
+    align-self: flex-start;
+    margin: 20px 0 0 40px;
+  }
+  @media screen and (min-width: $sidebar) {
+    margin: 20px 0 0 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: 30px 0 0 60px;
+    width: 500px;
+  }
+
+  @media screen and (min-width: $desktop-lg) {
+    width: 550px;
+  }
+
+  .date {
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 10px;
+    @include slide-in;
+
+    .cat {
+      font-size: 0.95rem;
+    }
+  }
+
+  .deco {
+    width: 25px;
+    height: 4px;
+    position: relative;
+    background: $gradient;
+    @include slide-in;
+
+    transition-delay: 0.2s;
+    @media screen and (min-width: $tablet) {
+      width: 35px;
+    }
+    @media screen and (min-width: $desktop-lg) {
+      height: 6px;
+    }
+
+    //&::before {
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  background: $gradient;
+    //  transition: all 0.6s ease-in-out;
+    //  transition-delay: 0.2s;
+    //}
+  }
+
+  .entry-title {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+    @include slide-in;
+
+    transition-delay: 0.4s;
+    @media screen and (min-width: $tablet) {
+      font-size: 1.8rem;
+      line-height: normal;
+    }
+    @media screen and (min-width: $tablet-bg) {
+      font-size: 2.4rem;
+    }
+    @media screen and (min-width: $desktop-sm) {
+      font-size: 1.6rem;
+      margin-top: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width: $desktop-lg) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .interviewee {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: italic;
+    @include slide-in;
+
+    transition-delay: 0.5s;
+    @media screen and (min-width: $tablet) {
+      font-size: 1.2rem;
+    }
+    @media screen and (min-width: $tablet-bg) {
+      font-size: 1.6rem;
+    }
+    @media screen and (min-width: $desktop-sm) {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $desktop-lg) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.short_description {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: $text;
+  margin-bottom: 15px;
+  line-height: 1.6rem;
+  @include slide-in;
+
+  transition-delay: 0.7s;
+  @media screen and (min-width: $tablet-bg) {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+  @media screen and (min-width: $desktop-sm) {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+}
+
+.author-container {
+  margin-bottom: 20px;
+  padding-top: 8px;
+  border-top: 1px dotted rgb(204, 204, 204);
+  @include slide-in;
+
+  transition-delay: 0.9s;
+  @media screen and (min-width: $desktop) {
+    padding-top: 15px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .author-wrapper {
+    display: flex;
+
+    .avator-container {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      .avator {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .contents {
+      margin-left: 10px;
+      flex: 1;
+
+      .name {
+        height: 30px;
+        padding: 7px 0 0 0;
+      }
+
+      .desc {
+        font-size: 0.7rem;
+        line-height: 1.1rem;
+
+        @media screen and (min-width: $desktop) {
+          font-size: 0.8rem;
+          line-height: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.entry-content {
+  width: 90%;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  opacity: 0;
+  transition: all 1s ease;
+  @media screen and (min-width: $tablet) {
+    width: 80%;
+    font-size: 1rem;
+  }
+  @media screen and (min-width: $tablet-bg) {
+    width: calc(90% - 180px);
+    margin-left: calc(180px + 5%);
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  @media screen and (min-width: $nav-wide) {
+    width: calc(90% - 180px);
+    margin-left: calc(180px + 5%);
+  }
+  @media screen and (min-width: $sidebar) {
+    width: 700px;
+    margin-left: 180px;
+    padding: 0 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 750px;
+    margin-left: 220px;
+  }
+  @media screen and (min-width: $desktop-md) {
+    width: 800px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    margin-left: 250px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  figure {
+    margin: 0 auto 20px;
+    max-width: 100%;
+    height: auto;
+
+    img {
+      margin-bottom: 0;
+    }
+  }
+
+  .wp-caption-text {
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  a {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    color: $red;
+    text-decoration: underline;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  ul li,
+  ol li {
+    margin-bottom: 20px;
+    line-height: 1.8rem;
+  }
+}
+
+// Pagination
+.post-pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  @media screen and (min-width: $sidebar) {
+    margin-left: 200px;
+    justify-content: flex-start;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    margin-left: 310px;
+  }
+
+  .number {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 50px;
+    border: 1px solid $red;
+    @include flex-center;
+
+    color: white;
+    background: $red;
+    @media screen and (min-width: $tablet) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  a {
+    .number {
+      color: red;
+      background: white;
+    }
+  }
+}
+
+// tags
+.article-tags-container {
+  padding: 30px 0 10px;
+  @media screen and (min-width: $tablet) {
+    padding: 60px 30px 30px;
+  }
+  @media screen and (min-width: $desktop-sm) {
+    padding: 60px 50px 30px;
+  }
+
+  .article-tags {
+    //border-top: 1px solid $red;
+    padding-top: 7px;
+    height: 200px;
+
+    .tag-wrapper {
+      text-decoration: none;
+
+      .tag-text {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// author
+.article-author {
+  margin: 30px 0;
+  padding: 10px;
+  border-top: 1px solid $red;
+  border-bottom: 1px solid $red;
+
+  @media screen and (min-width: $tablet) {
+    padding: 50px 30px;
+  }
+  @media screen and (min-width: $desktop-sm) {
+    padding: 50px;
+  }
+
+  .author-title {
+    font-size: 1.6rem;
+    color: $red;
+    text-align: center;
+    margin: 20px auto;
+
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+
+  .author-contents {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+    }
+
+    .author-img-container {
+      width: 200px;
+      height: 200px;
+      background: $red;
+      margin: 0 auto;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .author-introduce {
+      flex: 1;
+      margin-top: 10px;
+
+      @media screen and (min-width: $tablet) {
+        margin-left: 20px;
+        margin-top: 0;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @media screen and (min-width: $tablet) {
+          text-align: left;
+        }
+      }
+
+      .author-comments {
+        font-size: 0.9rem;
+        line-height: 1.7rem;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: $tablet) {
+          text-align: left;
+        }
+      }
+
+      .author-url {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 25px;
+          height: 25px;
+          object-fit: contain;
+          margin-right: 10px;
+        }
+
+        .author-url-text {
+          color: $red;
+        }
+      }
+    }
+  }
+}

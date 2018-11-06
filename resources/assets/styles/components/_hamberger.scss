@@ -1,0 +1,21 @@
+.hamburger {
+  padding: 20px 18px;
+  opacity: 0;
+  transition: all 1s ease;
+  transition-delay: 0.3s;
+  @media screen and (min-width: $tablet-bg) {
+    display: none;
+  }
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  border-radius: 0;
+  background: $gradient;
+
+  @media screen and (min-width: $tablet) {
+    width: 43px;
+    height: 5.5px;
+  }
+}

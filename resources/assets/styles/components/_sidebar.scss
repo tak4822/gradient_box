@@ -1,0 +1,189 @@
+.sidebar {
+  transition: 2s all ease;
+  opacity: 0;
+}
+
+.side-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @media screen and (min-width: $tablet-bg) {
+    width: 700px;
+    margin-left: 180px;
+  }
+  //@media screen and (min-width: $nav-wide) {
+  //  width: calc(80% - 180px);
+  //  margin-left: calc(180px + 10%);
+  //}
+  @media screen and (min-width: $sidebar) {
+    position: absolute;
+    top: calc(100vh + 280px);
+    width: calc(100% - 880px);
+    left: 880px;
+    margin-left: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc(100% - 970px);
+    left: 970px;
+  }
+  @media screen and (min-width: $desktop-md) {
+    width: calc(100% - 1020px);
+    top: calc(100vh + 350px);
+    left: 1020px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    width: calc(100% - 1050px);
+    left: 1050px;
+  }
+
+  .side-line {
+    @include flex-center;
+
+    background: $green;
+    width: 100%;
+    height: 320px;
+    @media screen and (min-width: $tablet) {
+      height: 400px;
+    }
+    @media screen and (min-width: $sidebar) {
+      height: 320px;
+      order: 1;
+    }
+
+    .side-line-head {
+      font-size: 1.6rem;
+      color: white;
+      margin-bottom: 20px;
+      font-weight: bold;
+      @media screen and (min-width: $tablet) {
+        font-size: 2.4rem;
+      }
+      @media screen and (min-width: $sidebar) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .side-line-contents {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-bottom: 20px;
+
+      .side-line-img {
+        @media screen and (min-width: $tablet) {
+          width: 150px;
+          align-self: center;
+        }
+        @media screen and (min-width: $sidebar) {
+          width: 120px;
+        }
+      }
+
+      p {
+        width: 45%;
+        max-width: 300px;
+        margin-left: 10px;
+        color: white;
+        @media screen and (min-width: $sidebar) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .side-line-button {
+      width: 80%;
+      max-width: 350px;
+      background: white;
+      box-shadow: $shadow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+    }
+
+    .button-text {
+      color: $green;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding-top: 3px;
+    }
+  }
+}
+
+.side-ad {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 92%;
+  max-width: 600px;
+  @media screen and (min-width: $tablet) {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: $sidebar) {
+    order: 2;
+  }
+
+  img {
+    width: 100%;
+    box-shadow: $shadow;
+  }
+}
+
+// Other Articles
+.other-articles {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  @media screen and (min-width: $sidebar) {
+    order: 3;
+  }
+
+  .popular-articles {
+    margin-bottom: 100px;
+  }
+
+  .other-articles-title-container {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+    @media screen and (min-width: $tablet) {
+      margin-left: 5%;
+    }
+    @media screen and (min-width: $sidebar) {
+      margin-left: 7.5%;
+    }
+
+    .deco {
+      height: 100%;
+      width: 10px;
+      margin-right: 20px;
+      background: $red;
+    }
+  }
+
+  .other-articles-title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 8px;
+    @media screen and (min-width: $tablet) {
+      font-size: 2.5rem;
+    }
+    @media screen and (min-width: $sidebar) {
+      font-size: 2rem;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+.single-post {
+  .side-container {
+    @media screen and (min-width: $sidebar) {
+      top: 100vh;
+    }
+  }
+}

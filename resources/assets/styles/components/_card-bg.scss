@@ -1,0 +1,175 @@
+.card-bg-container {
+  width: 94%;
+  margin: 20px auto 50px;
+  height: 225px;
+  box-shadow: $shadow-light;
+  background: white;
+  z-index: 5;
+  position: relative;
+  @media screen and (min-width: $tablet) {
+    width: 70%;
+  }
+  @media screen and (min-width: $card-bg) {
+    height: 260px;
+    margin: 40px auto 80px;
+  }
+  @media screen and (min-width: $tablet-bg) {
+    width: calc(100% - 400px); // 100% - 150pxx(nav) x 2 (both side) - 50px x 2 (smaller than gradient header 50px for both sides)
+    max-width: 540px;
+    margin: 40px auto 100px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc(100% - 460px); // 100% - 180pxx(nav) x 2 (both side) - 50px x 2 (smaller than gradient header 50px for both sides)
+    margin: 40px auto 100px;
+  }
+  @media screen and (min-width: $sidebar) {
+    width: calc(50% - 20px); // 100 % - 180px (nav) - 50px (inside gradient nav)
+    margin: 40px 20px 40px 0;
+    height: 280px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    width: 540px;
+    margin-right: 50px;
+  }
+
+  &:hover {
+    .thumb {
+      transform: translate3d(-6px, -6px, 0);
+    }
+  }
+
+  .inside-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-bg-top {
+    height: 135px;
+    width: 100%;
+    position: relative;
+    background: white;
+    @media screen and (min-width: $card-bg) {
+      height: 170px;
+    }
+
+    .thumb {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      transition: all 0.3s ease-in-out;
+      z-index: 2;
+      @media screen and (min-width: $card-bg) {
+        width: 180px;
+        height: 180px;
+        top: -25px;
+        left: 15px;
+      }
+    }
+
+    .hover-deco {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      background: linear-gradient(to top right, #ffd31c, #fd2fe5);
+      @media screen and (min-width: $card-bg) {
+        width: 180px;
+        height: 180px;
+        top: -25px;
+        left: 15px;
+      }
+    }
+
+    .date-title {
+      position: absolute;
+      left: 165px;
+      top: 15px;
+      padding-right: 5px;
+      @media screen and (min-width: $card-bg) {
+        left: 210px;
+        padding-right: 10px;
+      }
+
+      .card-date {
+        font-weight: 300;
+        margin-bottom: 8px;
+        font-size: 0.7rem;
+        font-style: italic;
+        @media screen and (min-width: $card-bg) {
+          font-size: 0.9rem;
+        }
+      }
+
+      .deco {
+        height: 4px;
+        width: 20px;
+        background: $gradient;
+        margin-bottom: 7px;
+        @media screen and (min-width: $card-bg) {
+          width: 30px;
+        }
+      }
+
+      .card-bg-title {
+        font-size: 0.95rem;
+        color: $head;
+        font-weight: bold;
+        line-height: 1.4rem;
+
+        //@media screen and (min-width: $tablet) {
+        //  font-size: 1.1rem;
+        //}
+        @media screen and (min-width: $card-bg) {
+          font-size: 1.3rem;
+          line-height: normal;
+        }
+        @media screen and (min-width: $sidebar) {
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+        }
+      }
+    }
+  }
+
+  .card-short-description {
+    flex: 1;
+    padding: 0 10px 5px 95px;
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    //@media screen and (min-width: $tablet) {
+    //  font-size: 0.8rem;
+    //  line-height: 1.4rem;
+    //  padding: 0 10px 5px 95px;
+    //}
+    @media screen and (min-width: $card-bg) {
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+      padding: 0 10px 5px 125px;
+    }
+    @media screen and (min-width: $desktop-sm) {
+      padding: 0 10px 5px 150px;
+    }
+  }
+
+  .tags-container {
+    width: 90px;
+    padding-left: 5px;
+    position: absolute;
+    top: 133px;
+    left: 0;
+    @media screen and (min-width: $card-bg) {
+      top: 163px;
+      width: 120px;
+    }
+    @media screen and (min-width: $desktop-sm) {
+      width: 150px;
+    }
+  }
+}

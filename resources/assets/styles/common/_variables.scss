@@ -1,0 +1,34 @@
+/** Colors */
+//$brand-primary: #27ae60;
+$head: #111;
+$text: #444;
+$grey: #ccc;
+$grey-bg: #fafafa;
+$green: #1bb71f;
+$logo-red: #ff4321;
+$red: #ff6a4e;
+
+$gradient: linear-gradient(to bottom right, #ffd31c, #fd2fe5);
+
+$yellow: #ffd31c;
+$pink: #fd2fe5;
+
+/** Box Model  */
+$spacer: 2rem;
+
+/** break points */
+$tablet: 550px;
+$card-bg: 750px;
+$tablet-bg: 900px;
+$desktop-sm: 1025px;
+$nav-wide: 1100px;
+$sidebar: 1200px;
+$desktop: 1300px;
+$desktop-md: 1400px;
+$desktop-lg: 1500px;
+
+$shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.16);
+$shadow-light:  0 2px 8px 2px rgba(0, 0, 0, 0.06);
+
+$headerHeight: 60px;
+$headerHeight-tablet: 80px;

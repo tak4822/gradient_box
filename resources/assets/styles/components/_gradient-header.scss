@@ -1,0 +1,147 @@
+.cat-hero-container {
+  width: 100%;
+  height: 370px;
+  position: relative;
+  margin-bottom: 170px;
+  overflow: hidden;
+  @media screen and (min-width: $tablet) {
+    width: 80%;
+    margin: 100px auto 170px;
+  }
+  @media screen and (min-width: $tablet-bg) {
+    width: calc(100% - 300px); // 100% - 150pxx(nav) x 2 (both side)
+    margin: 160px 180px 150px;
+  }
+  @media screen and (min-width: $desktop-sm) {
+    margin: 150px 170px 150px;
+  }
+  @media screen and (min-width: $nav-wide) {
+    width: calc(100% - 360px); // 100% - 150pxx(nav) x 2 (both side)
+    margin: 170px 180px 150px;
+    height: 400px;
+  }
+  @media screen and (min-width: $desktop) {
+    //width: calc(100% - 550px); // 100% - 150pxx(nav) x 2 (both side)
+    margin: 170px 220px 150px;
+    height: 450px;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    width: calc(100% - 550px); // 100% - 150pxx(nav) x 2 (both side)
+    margin: 210px 300px 180px;
+    height: 480px;
+  }
+
+  .gradient-bg {
+    background: $gradient;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-in-out;
+    z-index: 2;
+
+    &.tag-page {
+      z-index: -2;
+    }
+  }
+
+  &.tag-page {
+    margin-bottom: -120px;
+  }
+
+  .title-wrapper {
+    position: absolute;
+    top: 70px;
+    left: 45px;
+    @include slide-in;
+
+    transition-delay: 0.3s;
+    z-index: 5;
+    @media screen and (min-width: $tablet) {
+      top: 50px;
+    }
+    @media screen and (min-width: $nav-wide) {
+      top: 60px;
+      left: 50px;
+    }
+    @media screen and (min-width: $desktop-lg) {
+      top: 80px;
+      left: 70px;
+    }
+
+    .title {
+      color: white;
+      font-size: 2.6rem;
+      line-height: 3.5rem;
+      @media screen and (min-width: $tablet) {
+        font-size: 3rem;
+        line-height: normal;
+      }
+      @media screen and (min-width: $nav-wide) {
+        font-size: 4rem;
+      }
+      @media screen and (min-width: $desktop-lg) {
+        font-size: 5rem;
+        line-height: 5.5rem;
+      }
+
+      &.tag {
+        font-size: 2rem;
+        @media screen and (min-width: $tablet) {
+          font-size: 2.5rem;
+          line-height: normal;
+        }
+        @media screen and (min-width: $nav-wide) {
+          font-size: 3.5rem;
+        }
+        @media screen and (min-width: $desktop-lg) {
+          font-size: 4rem;
+          line-height: 5.5rem;
+        }
+      }
+    }
+
+    .desc {
+      color: white;
+      font-weight: 400;
+      margin-top: -5px;
+      @media screen and (min-width: $desktop-lg) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .tags-tile {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    @include slide-in(30px);
+
+    transition-delay: 0.8s;
+    z-index: 5;
+    @media screen and (min-width: $tablet) {
+      right: -3px;
+      font-size: 2.4rem;
+      line-height: 1.3rem;
+    }
+    @media screen and (min-width: $nav-wide) {
+      font-size: 3.2rem;
+      line-height: 1.7rem;
+    }
+  }
+
+  .tags-container {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: all 0.3s linear;
+  }
+}
