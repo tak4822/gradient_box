@@ -36,7 +36,7 @@
   @endwhile
 </div>
 <div class="pagination-container">
-  @php($count = $cat->category_count)
+  @php($count = $cat[0]->category_count)
   @php(App\pagination($count))
 </div>
 @endsection
