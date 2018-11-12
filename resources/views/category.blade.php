@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-@php($cat = get_the_category()[0] echo(get_the_category()))
+@php($cat = get_the_category())
 <div class="cat-hero-container">
   <div class="gradient-bg"></div>
   <div class="title-wrapper">
-    <p class="title">{{ $cat->name }}</p>
-    <p class="desc">{{ $cat->description }}</p>
+    <p class="title">{{ $cat[0]->cat_name }}</p>
+    <p class="desc">{{ $cat[0]->cat_description }}</p>
   </div>
 
   <p class="tags-tile">POPURAR TAGS</p>
   <div class="tags-container">
-    @foreach(App\my_category_tag_cloud(['cat' => $cat->cat_ID]) as $key => $tag)
+    @foreach(App\my_category_tag_cloud(['cat' => $cat[0]->cat_ID]) as $key => $tag)
     @if($key < 6 ) <a href="{{ get_tag_link($tag->term_id) }}" class="tag-wrapper pull-right">
       <div class="tag-deco">
         <img src="@asset('images/tag_deco.svg')" alt="">
