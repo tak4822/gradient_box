@@ -25,13 +25,14 @@ export default function (
       j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KNCLD8M')
+
+    // Googleアナリティクスへ送信
+    dataLayer.push({ // eslint-disable-line no-undef
+      'newPageUrl': location.pathname,
+      event: 'pageLoaded'
+    });
   }
 
-  // Googleアナリティクスへ送信
-  dataLayer.push({ // eslint-disable-line no-undef
-    'newPageUrl': location.pathname,
-    event: 'pageLoaded'
-  });
 
   window.scrollTo(0, 0); // page goes to top
   $('.sidebar').css('opacity', 1); // show sidebar after page goes to top

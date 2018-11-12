@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@php($cat = get_the_category()[0])
+@php($cat = get_the_category()[0] echo(get_the_category()))
 <div class="cat-hero-container">
   <div class="gradient-bg"></div>
   <div class="title-wrapper">

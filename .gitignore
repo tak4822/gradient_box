@@ -1,6 +1,7 @@
 .DS_Store
 .cache-loader/
 .idea/
+.gitattributes/
 
 node_modules/
 vendor/
