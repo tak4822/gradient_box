@@ -8,6 +8,30 @@ export default function (
   //   return; // この時に更新は必要ありません
   // }
 
+  if (
+    document.location.hostname !== 'localhost' &&
+    document.location.hostname !== 'xcrap.local'
+  ) {
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KNCLD8M')
+  }
+
+  // Googleアナリティクスへ送信
+  dataLayer.push({ // eslint-disable-line no-undef
+    'newPageUrl': location.pathname,
+    event: 'pageLoaded'
+  });
 
   window.scrollTo(0, 0); // page goes to top
   $('.sidebar').css('opacity', 1); // show sidebar after page goes to top

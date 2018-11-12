@@ -138,11 +138,10 @@ class App extends Controller
     }
 
     static function getUrl() {
-        return get_permalink();
-        // if ( is_single() ) {
-        //     return get_permalink();
-        // } else {
-        //     return 'https://canarie.jp';
-        // }
+        if ( is_single() ) {
+            return get_permalink();
+        } else {
+            return 'https://canarie.jp';
+        }
     }
 }

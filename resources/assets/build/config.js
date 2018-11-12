@@ -1,5 +1,7 @@
 const path = require('path');
-const { argv } = require('yargs');
+const {
+  argv
+} = require('yargs');
 const merge = require('webpack-merge');
 
 const desire = require('./util/desire');
@@ -11,12 +13,11 @@ const userConfig = merge(
 
 const isProduction = !!((argv.env && argv.env.production) || argv.p);
 const rootPath =
-  userConfig.paths && userConfig.paths.root
-    ? userConfig.paths.root
-    : process.cwd();
+  userConfig.paths && userConfig.paths.root ?
+  userConfig.paths.root :
+  process.cwd();
 
-const config = merge(
-  {
+const config = merge({
     open: true,
     copy: 'images/**/*',
     proxyUrl: 'http://localhost:3000',
@@ -38,8 +39,10 @@ const config = merge(
 );
 
 module.exports = merge(config, {
-  env: Object.assign(
-    { production: isProduction, development: !isProduction },
+  env: Object.assign({
+      production: isProduction,
+      development: !isProduction
+    },
     argv.env
   ),
   publicPath: `${config.publicPath}/${path.basename(config.paths.dist)}/`,
