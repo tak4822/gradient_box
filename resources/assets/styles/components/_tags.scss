@@ -14,6 +14,10 @@
     float: right;
     margin-right: 25px;
     display: block;
+
+    @media screen and (max-width: $card-bg) {
+      margin-right: 15px;
+    }
   }
 
   &.pull-left {
