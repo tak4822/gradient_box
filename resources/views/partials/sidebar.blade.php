@@ -46,7 +46,7 @@
       <img class="side-line-img" src="@asset('images/line_rabit.png')" alt="">
       <p>カナダへの留学、ワーキングホリデーの悩みから、恋の悩みまで、Lineで気軽にCanarieスタッフと相談できちゃいます！</p>
     </div>
-    <a href="https://line.me/R/ti/p/%40icw3397b" class="side-line-button">
+    <a href="https://line.me/R/ti/p/%40yil3824z" class="side-line-button">
       <p class="button-text">Talk With Us</p>
     </a>
   </div>
