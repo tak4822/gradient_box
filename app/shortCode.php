@@ -100,3 +100,36 @@ function markerFunc( $atts,  $content = null ) {
     return $html;
 }
 add_shortcode('marker', __NAMESPACE__ . '\\markerFunc');
+
+
+function interviewHtmlGenerator($dir, $img_url, $content) {
+   $html = "<div class='article-thumb-container " . $dir . "'>
+        <div class='thumb-container " . $dir . "'>
+            <div class='thumb-wrapper'>
+                <img src='" . $img_url . "'>
+            </div>
+        </div>
+        <div class='thumb-contents " . $dir . "'>
+            <p class='thumb-text'>" . $content . "</p>
+        </div>
+    </div>";
+
+    return $html;
+}
+
+function interviewerBalloonFunc( $atts,  $content = null ) {
+    $interviewer_id = get_post_meta(get_the_ID(), 'interviewer', true);
+    $interviewer_url = get_avatar_url($interviewer_id);
+
+    return interviewHtmlGenerator('right', $interviewer_url, $content);
+}
+add_shortcode('interviewer', __NAMESPACE__ . '\\interviewerBalloonFunc');
+
+function intervieweeBalloonFunc( $atts,  $content = null ) {
+
+    $interviewee_image_id = get_post_meta(get_the_ID(), 'interviewee_image', true);
+    $interviewee_url = wp_get_attachment_image_src($interviewee_image_id, 'Small_thumb')[0];
+
+    return interviewHtmlGenerator('left',  $interviewee_url, $content);
+}
+add_shortcode('interviewee', __NAMESPACE__ . '\\intervieweeBalloonFunc');
