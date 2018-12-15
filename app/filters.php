@@ -110,3 +110,5 @@ function wpse_disable_admin_bar( $user_id ) {
 }
 
 add_action( 'user_register', 'wpse_disable_admin_bar', 10, 1 );
+
+remove_action('wp_head', '_wp_render_title_tag', 1);
